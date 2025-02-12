@@ -7,12 +7,12 @@ import torchvision.models as models
 import torch.nn as nn
 from PIL import Image
 
-yolo_model = YOLO("last.pt")  # Change to your YOLO model path
+yolo_model = YOLO("last.pt")  
 class GenderClassifier(nn.Module):
     def __init__(self):
         super(GenderClassifier, self).__init__()
         self.backbone = models.resnet18(pretrained=True)
-        self.backbone.fc = nn.Linear(self.backbone.fc.in_features, 1)  # Binary classification
+        self.backbone.fc = nn.Linear(self.backbone.fc.in_features, 1)  
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
