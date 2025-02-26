@@ -31,4 +31,4 @@ def detect_and_classify_yolo(directory_path, output_csv="results_2.csv"):
     df = pd.DataFrame(results_list, columns=["Image Name", "Predicted Gender"])
     df.to_csv(output_csv, index=False)
     print(f"Results saved to {output_csv}")
-detect_and_classify_yolo("testing2")
+detect_and_classify_yolo("folder_name")
