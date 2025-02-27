@@ -6,7 +6,7 @@ import numpy as np
 from ultralytics import YOLO
 import os
 
-yolo_model = YOLO("last (8).pt")  
+yolo_model = YOLO("model.pt")  
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 yolo_model.to(device)
 app = FastAPI()
